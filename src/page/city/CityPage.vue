@@ -1,16 +1,16 @@
 <template>
-  <div class="hello">
+  <div class="city-page">
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'CityPage',
   props: {
     msg: {
       type: String,
-      default: 'helloWorld'
+      default: '我就是city组件'
     }
   }
 }
