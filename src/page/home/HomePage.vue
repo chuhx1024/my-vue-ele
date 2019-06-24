@@ -141,12 +141,7 @@ export default {
       span:nth-of-type(1) {
         color: $blue;
       }
-      .icon {
-        width: 1em;
-        vertical-align: -0.15em;
-        fill: currentColor;
-        overflow: hidden;
-      }
+
     }
   }
   .group-city-container-item {

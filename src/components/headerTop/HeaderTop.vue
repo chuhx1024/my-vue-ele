@@ -1,6 +1,14 @@
 <template>
   <div class="header-top">
     <slot name='logo'></slot>
+    <section class="header-top-goback" v-if="goBack" @click="$router.go(-1)">
+      <svg class="icon">
+        <use xlink:href="#iconfanhui"></use>
+      </svg>
+    </section>
+    <section class="header-top-title" v-if="headerTitle">
+      <span>{{headerTitle}}</span>
+    </section>
     <router-link to="./city" class="header-top-login">
       <span>登录|注册</span>
     </router-link>
@@ -11,9 +19,13 @@
 export default {
   name: 'HeaderTop',
   props: {
-    msg: {
+    goBack: {
+      type: Boolean,
+      default: false
+    },
+    headerTitle: {
       type: String,
-      default: '我就是headerTop'
+      default: ''
     }
   }
 }
@@ -28,6 +40,20 @@ export default {
   position: fixed;
 
   @include wh(100%, 1.95rem);
+
+  .header-top-goback {
+    display: inline-block;
+    padding-left: 0.4rem;
+    @include wh(0.4rem, 1.95rem);
+    line-height: 1.95rem;
+
+  }
+  .header-top-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .header-top-login {
     float: right;
     height: 100%;

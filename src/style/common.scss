@@ -16,9 +16,18 @@ body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, l
     outline: none;
   }
 }
-
+// 
 .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+// 所有svg图标的样式
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
