@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import '@/config/rem'
 import '../static/font/iconfont.js'
+// import 'normalize.css'
 
 Vue.config.productionTip = false
 
