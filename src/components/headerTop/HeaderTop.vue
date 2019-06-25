@@ -38,6 +38,9 @@ export default {
 .header-top {
   background-color: $blue;
   position: fixed;
+  font-size: 0.7rem;
+  left: 0;
+  top: 0;
 
   @include wh(100%, 1.95rem);
 

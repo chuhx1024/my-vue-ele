@@ -21,6 +21,7 @@ export default new Router({
     //  当前选择的城市页
     {
       path: '/city',
+      name: 'city',
       component: () => import('@/page/city/CityPage')
     }
   ]

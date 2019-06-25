@@ -22,7 +22,7 @@
             <span v-if="index===1">(按字母排序)</span>
           </h4>
           <ul class="city-list-ul">
-            <router-link tag="li" v-for="item in val" to="/city" :key="item.id" class="ellipsis">
+            <router-link tag="li" v-for="item in val" :to="{name:'city',query:{id:item.id},params:{cityName:item.name}}" :key="item.id" class="ellipsis">
               {{item.name}}
             </router-link>
           </ul>
@@ -88,6 +88,16 @@ export default {
         this.groupCity = res
       })
     },
+    // 路由转跳
+    goToCity (id, name) {
+      this.$router.push({
+        name: 'city',
+        params: {
+          id,
+          name
+        }
+      })
+    },
     reload () {
       window.location.reload()
     }
@@ -105,7 +115,7 @@ export default {
     font-weight: 400;
     color: #fff;
     display: inline-block;
-    height: 100%;
+    height: 1.95rem;
     line-height: 1.95rem;
     padding-left: 0.4rem;
   }
