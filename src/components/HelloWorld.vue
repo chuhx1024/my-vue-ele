@@ -7,19 +7,64 @@
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    msg: {
-      type: String,
-      default: 'helloWorld'
+
+  // 引用的组件
+  components: {
+    Ref
+  },
+  // 声明一个本地过滤器
+  filters: {
+    Upper (val) {
+      return val.toUpperCase()
     }
-  }
+  },
+
+  mixins: [],
+
+  props: {
+    msg: String
+  },
+
+  data () {
+    return {
+
+    }
+  },
+  
+  computed: {
+    taxType: function () {
+      return this.tableData.taxType
+    }
+  },
+
+  watch: {
+    activeId (newId, oldId) {
+      console.log(newId)
+      console.log(oldId)
+    },
+  },
+
+  beforeCreate () {},
+  created () {},
+  beforeMount () {},
+  mounted () {},
+  beforeUpdate () {},
+  updated () {},
+  activated () {},
+  deactivated () {},
+  beforeDestroy () {},
+  destroyed () {},
+
+  methods () {
+    add () {
+      console.log('我是一个函数')
+    }
+  },
+
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h1 {
-  margin: 40px 0 0;
-}
-
+<style lang="scss" scoped>
 </style>

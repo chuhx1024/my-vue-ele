@@ -12,3 +12,10 @@ $fc:#fff;
   font: #{$size}/#{$line-height} $family;
 }
 
+// 字体大小 颜色
+
+@mixin sc ($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+

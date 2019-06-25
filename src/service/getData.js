@@ -14,3 +14,10 @@ export const hotCity = () => fetch('/api/v1/cities', {
 export const groupCity = () => fetch('/api/v1/cities', {
   type: 'group'
 })
+
+// 获取搜素的数据
+export const searchPlace = (cityId, val) => fetch('/api/v1/pois', {
+  type: 'search',
+  city_id: cityId,
+  keyword: val
+})

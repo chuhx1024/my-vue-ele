@@ -62,7 +62,6 @@ export default {
           sortObj[String.fromCharCode(i)] = this.groupCity[String.fromCharCode(i)]
         }
       }
-
       return sortObj
     }
   },
@@ -86,16 +85,6 @@ export default {
       groupCity().then(res => {
         console.log(res)
         this.groupCity = res
-      })
-    },
-    // 路由转跳
-    goToCity (id, name) {
-      this.$router.push({
-        name: 'city',
-        params: {
-          id,
-          name
-        }
       })
     },
     reload () {
