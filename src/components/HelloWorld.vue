@@ -20,10 +20,20 @@ export default {
   },
 
   mixins: [],
-
-  props: {
-    msg: String
-  },
+  //父组件传递过来的数据（两种方式声明：1.数组 2.对象）
+  //数组方式
+  props: ['age'],
+  //对象方式
+  /*props: {
+    age: {
+      type: Number,
+      default: 0,
+      required: true,
+      validator: function (value) {
+        return value >= 0
+      }
+    }
+  }*/
 
   data () {
     return {

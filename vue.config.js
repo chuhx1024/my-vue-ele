@@ -8,7 +8,7 @@ module.exports = {
   devServer: {
     port: 8083,
     proxy: {
-      '/api': {
+      '/v1': {
         target: 'http://elm.cangdu.org:8001',
         changeOrigin: true,
         ws: true,

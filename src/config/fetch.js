@@ -1,10 +1,10 @@
-// import {
-//   baseUrl
-// } from './env'
+import {
+  baseUrl
+} from './env'
 
 export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
   type = type.toUpperCase()
-  // url = baseUrl + url
+  url = baseUrl + url
 
   if (type === 'GET') {
     let dataStr = '' // 数据拼接字符串
