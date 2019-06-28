@@ -11,10 +11,7 @@ module.exports = {
       '/v1': {
         target: 'http://elm.cangdu.org:8001',
         changeOrigin: true,
-        ws: true,
-        pathRewrite: {
-          '^/api': ''
-        }
+        ws: true
       }
     }
   }
